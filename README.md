@@ -47,7 +47,7 @@ Download and install the [extension][3] with the extension manager module.
 
 ### 4.1 Versions and support
 
-| OpenWeather | TYPO3       | PHP       | Support / Development                   |
+| AT Slider   | TYPO3       | PHP       | Support / Development                   |
 | ----------- | ----------- | ----------|---------------------------------------- |
 | 10.x        | 10.0 - 10.x | 7.0 - 7.2 | features, bugfixes, security updates    |
 
