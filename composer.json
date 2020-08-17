@@ -1,0 +1,38 @@
+{
+    "name": "ashokatree/atslider",
+    "type": "typo3-cms-extension",
+    "description": "Responsive slider with Title, Link, Subtitle, Description, Image.",
+    "version": "10.0.0",
+    "keywords": [
+        "slider"
+    ],
+    "homepage": "https://ashokatree.net",
+    "authors": [
+        {
+            "name": "Nirmalya Mondal",
+            "email": "nirmalya.mondal@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "at_slider"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AshokaTree\\AtSlider\\": "Classes"
+        }
+    },
+    "replace": {
+        "ashokatree/atslider": "self.version",
+        "typo3-ter/atslider": "self.version"
+    }
+}

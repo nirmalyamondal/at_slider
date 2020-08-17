@@ -1,0 +1,65 @@
+
+plugin.tx_atslider_pi1 {
+    view {
+        templateRootPaths.0 = EXT:at_slider/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_atslider_pi1.view.templateRootPath}
+        partialRootPaths.0 = EXT:at_slider/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_atslider_pi1.view.partialRootPath}
+        layoutRootPaths.0 = EXT:at_slider/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_atslider_pi1.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_atslider_pi1.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# Add additional JS files if it was turned on in the constants
+[{$plugin.tx_atslider_pi1.settings.javascript.addJQuery} == 1]
+page.includeJSFooterlibs.atSliderjQuery = {$plugin.tx_atslider_pi1.settings.javascript.jQueryFilePath}
+page.includeJSFooterlibs.atSliderjQuery.external = 1
+[end]
+[{$plugin.tx_atslider_pi1.settings.javascript.addSwiper} == 1]
+page.includeJSFooterlibs.atSliderSwiper = {$plugin.tx_atslider_pi1.settings.javascript.swiperFilePath}
+page.includeJSFooterlibs.atSliderSwiper.external = 1
+[end]
+# Add required javascript by turning on in the constants
+[{$plugin.tx_atslider_pi1.settings.javascript.addSlider} == 1]
+page {
+    # Inlude JavaScript files
+    includeJSFooter {
+        atSliderFile = {$plugin.tx_atslider_pi1.settings.javascript.sliderFilePath}
+    }
+}
+[end]
+
+# Add required css by turning on in the constants
+[{$plugin.tx_atslider_pi1.settings.css.addNormalize} == 1]
+page.includeCSS {
+  file90 = {$plugin.tx_atslider_pi1.settings.css.normalizeFilePath}
+  file90.external = 1
+}
+[end]
+# Add required css by turning on in the constants
+[{$plugin.tx_atslider_pi1.settings.css.addSwiper} == 1]
+page.includeCSS {
+  file92 = {$plugin.tx_atslider_pi1.settings.css.swiperFilePath}
+  file92.external = 1
+}
+[end]
+# Add required css by turning on in the constants
+[{$plugin.tx_atslider_pi1.settings.css.addSlider} == 1]
+page.includeCSS {
+  file95 = {$plugin.tx_atslider_pi1.settings.css.sliderFilePath}
+}
+[end]

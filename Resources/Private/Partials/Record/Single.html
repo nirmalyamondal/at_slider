@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+        <div class="at-slider__item swiper-slide">
+            <div class="at-slider__img">         
+                <f:if condition="{record.image}">
+                    <f:then>
+                        <img src="{record.image.originalResource.publicUrl}" class="at-image-potrait" alt="Potrait of {record.title} at Ashoka Tree" width="200px" height="270px" /> 
+                    </f:then>
+                    <f:else>
+                        <img src="typo3conf/ext/at_slider/Resources/Public/Icons/potrait.png" class="at-image-potrait" alt="Potrait at Ashoka Tree" />
+                    </f:else>
+                </f:if>                
+            </div>
+            <div class="at-slider__content">          
+                <span class="at-slider__code">{record.subtitle}</span>
+                <div class="at-slider__title">{record.title}</div>
+                <div class="at-slider__text"><f:format.html parseFuncTSPath="lib.parseFunc">{record.description}</f:format.html></div>
+                <f:if condition="{record.uri}">
+                    <f:link.typolink parameter="{record.uri}" class="at-slider__button">More ...</f:link.typolink>
+                </f:if>
+            </div>
+        </div>
+<!--{record.image.originalResource.title}-->

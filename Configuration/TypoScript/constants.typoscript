@@ -1,0 +1,33 @@
+
+plugin.tx_atslider_pi1 {
+    view {
+        # cat=plugin.tx_atslider_pi1/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:at_slider/Resources/Private/Templates/
+        # cat=plugin.tx_atslider_pi1/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:at_slider/Resources/Private/Partials/
+        # cat=plugin.tx_atslider_pi1/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:at_slider/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_atslider_pi1//a; type=string; label=Default storage PID
+        storagePid =
+    }
+    settings {
+        javascript {
+            addJQuery = 1
+            jQueryFilePath = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js
+            addSwiper = 1
+            swiperFilePath = https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js
+            addSlider = 1
+            sliderFilePath = EXT:at_slider/Resources/Public/javascript/at-slider.js
+        }
+        css {
+            addNormalize = 1
+            normalizeFilePath = https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css
+            addSwiper = 1
+            swiperFilePath = https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css
+            addSlider = 1
+            sliderFilePath = EXT:at_slider/Resources/Public/css/at-slider.css
+        }
+    }
+}
