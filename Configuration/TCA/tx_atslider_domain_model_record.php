@@ -19,7 +19,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'title,subtitle,description',
-        'iconfile' => 'EXT:at_slider/Resources/Public/Icons/tx_atslider_domain_model_record.png'
+        'iconfile' => 'EXT:at_slider/Resources/Public/Icons/tx_atslider_domain_model_record.svg'
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, uri, subtitle, description, image',

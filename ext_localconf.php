@@ -41,7 +41,7 @@ call_user_func(
 			$iconRegistry->registerIcon(
 				'atslider-plugin-pi1',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:at_slider/Resources/Public/Icons/user_plugin_pi1.png']
+				['source' => 'EXT:at_slider/Resources/Public/Icons/user_plugin_pi1.svg']
 			);
 		
     }
